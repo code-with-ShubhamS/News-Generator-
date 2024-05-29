@@ -1,0 +1,55 @@
+first we can fetch news when ever website is loaded
+window.addEventListener('load', fetchNews("India"));
+
+
+after faching we make a clone of template and then add it to its parent class 
+ articlesArr.forEach((element) => {
+        if (!element.urlToImage) return;
+        const cardclone = card_teplate.content.cloneNode(true);
+
+        //before adding clone in our website we can add data in it 
+        addDataInClone(cardclone, element);
+
+
+        card_container_parent.appendChild(cardclone);
+    });
+
+
+
+convert it into normal date
+const date = new Date(article.publishedAt).toLocaleString("en-US",{
+        timeZone:"Asia/Jakarta"
+    })
+
+
+on clicking any box we can go to its detail description of News
+    cardClone.firstElementChild.addEventListener('click',()=>{
+        window.open(article.url,"_blank")});  
+
+
+adding and removing active class from the navItemList
+
+let curSelectedNav=null;
+ if(curSelectedNav!=null){
+        curSelectedNav.classList.remove('active');
+    }
+       curSelectedNav=navItem;
+       curSelectedNav.classList.add('active');
+
+
+NOTE : If we want  text which is writen in input box than we use id.value
+
+
+for reloading whole website we use the 
+window.location.reload();
+
+
+
+
+how you can click enter in keyboard and call a function
+
+input.addEventListener('keyup',(e)=>{
+    if(e.keyCode===13){
+        alert("Shubham);
+    }
+})

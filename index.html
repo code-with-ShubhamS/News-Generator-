@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-main flex">
+
+            <div class="logo" id="myLogo">
+                <img src="./assets/newFi.png" alt="">
+            </div>
+            
+            <div class="nav-menu ">
+                <ul class="flex menu">
+                    <li class="menu-list" id="ipl"  onclick="navItemClick('ipl')">ipl</li>
+                    <li class="menu-list" id="finance" onclick="navItemClick('finance')">finance</li>
+                    <li class="menu-list" id="politics" onclick="navItemClick('politics')">politics</li>
+                </ul>
+            </div>
+            
+            <div class="nav-end">
+                <input type="text" id="input" placeholder="ex sports">
+                <button id="btn" onclick="searchItemBtn()">Search</button>
+            </div>
+        </div>
+        </nav>
+
+        <main>
+            <div class="card-container flex" id="card-container-parent">
+              
+
+               
+                <!-- <div class="card-box">
+                    <div class="image">
+                        <img src="https://via.placeholder.com/400x200" alt="">
+                    </div>
+                    <div class="card-box-data">
+                        <h2 class="news-title">This is my headind</h2>
+                        <h3 class="news-source">New headind</h3>
+                        <p class="new desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quam fuga neque, doloremque consectetur animi odio expedita quae hic deserunt!</p>
+                    </div>
+                </div> -->
+              
+            </div>
+        </main>
+        
+        
+        <template id="card-template">
+            <div class="card-box" id="card-box">
+                <div class="image">
+                    <img id="card_Img" src="https://via.placeholder.com/400x200" alt="">
+                </div>
+                <div class="card-box-data">
+                    <h2 class="news-title" id="card_heading">This is my headind</h2>
+                    <h4 class="news-source" id="card_source">New headind</h3>
+                    <p class="new desc" id="card_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quam fuga neque, doloremque consectetur animi odio expedita quae hic deserunt!</p>
+                </div>
+            </div>
+        </template>
+    <script src="script.js"></script>
+</body>
+</html>
